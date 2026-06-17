@@ -1,9 +1,9 @@
 ---
-site_name: Dev-System-Awesome
+site_name: GOC-Base-Repo-Template
 site_description: Lipford-Dutch reusable repository kickoff template.
-site_url: https://lipford-dutch.github.io/Dev-System-Awesome/
-repo_url: https://github.com/Lipford-Dutch/Dev-System-Awesome
-repo_name: Lipford-Dutch/Dev-System-Awesome
+site_url: https://lipford-dutch.github.io/GOC-Base-Repo-Template/
+repo_url: https://github.com/Lipford-Dutch/GOC-Base-Repo-Template
+repo_name: Lipford-Dutch/GOC-Base-Repo-Template
 theme:
   name: material
   features:

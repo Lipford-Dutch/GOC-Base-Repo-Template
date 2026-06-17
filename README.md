@@ -1,9 +1,10 @@
-# Dev-System-Awesome
+# GOC-Base-Repo-Template
 
-Dev-System-Awesome is the Lipford-Dutch project kickoff template for new
-repositories. It packages the baseline operating model, documentation standards,
-GitHub automation, triage discipline, security posture, and release governance
-that every new codebase should inherit before product-specific code lands.
+GOC-Base-Repo-Template is the Lipford-Dutch project kickoff template for new
+repositories. It packages the Generals of Chaos baseline operating model,
+documentation standards, GitHub automation, triage discipline, security posture,
+and release governance that every new codebase should inherit before
+product-specific code lands.
 
 The template is intentionally product-neutral. It does not contain application
 runtime code, secrets, vendor-specific credentials, or project-specific metrics.
@@ -20,6 +21,8 @@ runtime code, secrets, vendor-specific credentials, or project-specific metrics.
   and operational readiness templates.
 - Quality defaults: editor settings, Git attributes, markdown/yaml linting, and
   pre-commit hooks.
+- Social and launch assets: reusable social preview artwork in
+  `docs/assets/social-preview.png` and `docs/assets/social-preview.svg`.
 
 ## Kickoff Flow
 
@@ -75,6 +78,13 @@ Build the static documentation site:
 ```bash
 mkdocs build --strict
 ```
+
+## Social Preview
+
+Use `docs/assets/social-preview.png` as the repository Social Preview image in
+GitHub settings. The editable source lives at `docs/assets/social-preview.svg`.
+Keep the preview generic so repositories created from this template can reuse or
+adapt it without leaking project-specific context.
 
 ## Template Boundaries
 
