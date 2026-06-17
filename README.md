@@ -1,103 +1,90 @@
 # Dev-System-Awesome
-Generals Of Chaos Development System Requirements Design Tips Tricks and Configurations for Applications 
 
-# Generals of Chaos Development System Requirements, Design Tips, Tricks, and Configurations for Applications
+Dev-System-Awesome is the Lipford-Dutch project kickoff template for new
+repositories. It packages the baseline operating model, documentation standards,
+GitHub automation, triage discipline, security posture, and release governance
+that every new codebase should inherit before product-specific code lands.
 
-Welcome to the **Generals of Chaos Development Repository**—your comprehensive resource hub for managing, configuring, and optimizing applications and tools within our projects. This repository serves as a collaborative space where developers, testers, and contributors can share best practices, configurations, and resources for effective application deployment and management.
+The template is intentionally product-neutral. It does not contain application
+runtime code, secrets, vendor-specific credentials, or project-specific metrics.
 
----
+## What This Template Provides
 
-## **Purpose**
-This repository consolidates everything you need to streamline the setup, configuration, and optimization of applications used across various Generals Triaging Chaos projects. Whether you're installing software, tweaking configurations, or integrating hardware and performance monitoring (APM), this is your one-stop resource.
+- Repository governance: contribution, security, support, code of conduct, and
+  decision-record guidance.
+- GitHub operations: issue templates, pull request template, Dependabot,
+  Dependency Review, CodeQL, Scorecard, Pages deployment, and documentation CI.
+- Documentation system: MkDocs Material structure with kickoff, standards,
+  security, release, operations, and General Triaging Chaos playbooks.
+- Project readiness assets: ADR, runbook, release checklist, security exception,
+  and operational readiness templates.
+- Quality defaults: editor settings, Git attributes, markdown/yaml linting, and
+  pre-commit hooks.
 
----
+## Kickoff Flow
 
-## **Repository Structure**
+1. Create a new repository from this template.
+2. Replace placeholder ownership in `CODEOWNERS`, `SECURITY.md`, and
+   `docs/ownership.md`.
+3. Enable GitHub Pages from GitHub Actions.
+4. Enable repository security features:
+   - Dependabot alerts and security updates
+   - Secret scanning and push protection
+   - Code scanning
+   - Branch protections for `main`
+5. Fill out the kickoff checklist in `docs/kickoff-checklist.md`.
+6. Create the first ADR from `templates/adr.md`.
+7. Open the first product PR with the included pull request template.
 
-- **/installables/**
-  - Contains links or direct access to executable files (`.exe`) and installation packages for supported applications.
+## Repository Layout
 
-- **/configurations/**
-  - Predefined configuration files and templates for commonly used setups.
+```text
+.
+|-- .github/                 # GitHub workflows, templates, and governance
+|-- docs/                    # MkDocs source documentation
+|-- templates/               # Reusable project artifacts
+|-- reports/                 # Audit and readiness reports
+|-- mkdocs.yml               # Documentation site configuration
+|-- SECURITY.md              # Vulnerability reporting policy
+|-- CONTRIBUTING.md          # Contribution and review standards
+|-- GOVERNANCE.md            # Ownership and decision model
+|-- SUPPORT.md               # Support and escalation expectations
+|-- AGENTS.md                # AI agent operating instructions
+```
 
-- **/license_keys/**
-  - Secure storage for application license keys or instructions on how to access them (restricted access).
+## General Triaging Chaos Operating Model
 
-- **/tips_tricks/**
-  - Best practices, shortcuts, and advice for optimizing application performance and usage.
+This template keeps chaos useful by making work visible, classifiable, and
+reviewable:
 
-- **/collaboration/**
-  - Documentation and logs of collaboration efforts on testing, hardware tweaking, and application customizations.
+- Capture ambiguity as issues, ADRs, or risks instead of burying it in chat.
+- Treat CI as the minimum bar, not the final review.
+- Keep repo automation boring, repeatable, and least-privileged.
+- Prefer small, reversible changes with explicit acceptance criteria.
+- Document the operational path before production traffic exists.
 
-- **/resources/**
-  - Links to additional documentation, tutorials, and external resources for learning.
+## Local Documentation Preview
 
-- **/APM/**
-  - Application Performance Monitoring configurations, scripts, and testing guidelines.
+```bash
+python -m pip install -r requirements-docs.txt
+mkdocs serve
+```
 
----
+Build the static documentation site:
 
-## **Getting Started**
+```bash
+mkdocs build --strict
+```
 
-1. **Clone the Repository:**
-   ```bash
-   git clone https://github.com/your-organization/generals-of-chaos-dev.git
-   ```
+## Template Boundaries
 
-2. **Navigate to the Directory:**
-   ```bash
-   cd generals-of-chaos-dev
-   ```
+This repository should stay generic. Do not add:
 
-3. **Explore Subdirectories:**
-   - Start with the `/installables/` directory to get access to the required applications.
-   - Review configuration options under `/configurations/` to tailor the setup to your project’s needs.
+- production secrets, license keys, or encrypted credentials
+- application-specific business logic
+- customer data or environment-specific configuration
+- tool output that cannot be reused by future repositories
+- large binaries or installable executables
 
----
-
-## **Key Features**
-
-- **Comprehensive Installation Packages:** Access `.exe` files and installation scripts directly from the repository.
-- **Predefined Configurations:** Save time with preconfigured settings designed for optimal performance.
-- **License Key Management:** Secure handling of licenses for software tools.
-- **Collaborative Customization:** Documented insights into how tweaks, tests, and configurations were applied.
-- **APM Integration:** Tips and scripts for monitoring performance using APM tools and metrics.
-
----
-
-## **Collaboration Guidelines**
-
-- **Branching:** Create a feature branch when working on any configuration or optimization.
-- **Pull Requests:** Submit a pull request with clear documentation of your changes.
-- **Documentation:** Update relevant sections under `/collaboration/` and `/tips_tricks/` to reflect the latest findings.
-
----
-
-## **Best Practices**
-
-1. **Keep Configurations Versioned:** Always maintain version control for configuration files.
-2. **Document Everything:** Share knowledge and observations in the `/collaboration/` and `/tips_tricks/` directories.
-3. **Test Before Merging:** Ensure any configuration or tweak is tested locally before merging into the main branch.
-
----
-
-## **APM (Application Performance Monitoring)**
-This repository supports the integration of Application Performance Monitoring tools to help track and optimize performance metrics. Follow guidelines under `/APM/` to configure and use these tools effectively.
-
----
-
-## **Contributing**
-We welcome contributions from all collaborators. If you have new tips, configuration options, or test results, please submit them via pull requests and update the relevant documentation.
-
----
-
-## **Contact**
-For issues, questions, or suggestions, reach out via the project’s communication channel or contact:
-- **Will Lipford**  
-- **Keith Bloemendaal**
-
----
-
-Let’s keep pushing boundaries and making chaos work for us!
-
-
+Use `docs/examples.md` for generic examples and move product-specific content to
+the repository created from this template.
