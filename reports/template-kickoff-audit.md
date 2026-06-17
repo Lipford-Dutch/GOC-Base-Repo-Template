@@ -34,3 +34,5 @@ the reusable scaffolding expected from an organization template.
 - Replace placeholder CODEOWNERS with real teams.
 - Configure branch protection in GitHub settings.
 - Enable secret scanning and push protection.
+- Enable dependency graph and GitHub Advanced Security where available so
+  Dependency Review, CodeQL, and Scorecard can become blocking controls.

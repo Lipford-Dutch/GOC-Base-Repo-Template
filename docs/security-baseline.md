@@ -11,6 +11,14 @@
 - Least-privilege workflow permissions
 - Environment-scoped secrets
 
+!!! note "GitHub security feature availability"
+
+    The template includes Dependency Review, CodeQL, and Scorecard workflows.
+    Some repositories require GitHub Advanced Security, dependency graph, or
+    code scanning to be enabled before those workflows can enforce findings.
+    Until those repository features are enabled, the workflows should be treated
+    as advisory bootstrap checks.
+
 ## Secret Rules
 
 Never commit:
