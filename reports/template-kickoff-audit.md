@@ -29,8 +29,10 @@ the reusable scaffolding expected from an organization template.
 
 ## Remaining Manual Setup
 
-- Enable this repository as a GitHub template repository.
-- Enable Pages from GitHub Actions.
+- Repository is now configured as `Lipford-Dutch/GOC-Base-Repo-Template`.
+- GitHub template mode is enabled.
+- Wiki is enabled and seeded with a base operating manual.
+- Social preview source and PNG live under `docs/assets/`.
 - Replace placeholder CODEOWNERS with real teams.
 - Configure branch protection in GitHub settings.
 - Enable secret scanning and push protection.

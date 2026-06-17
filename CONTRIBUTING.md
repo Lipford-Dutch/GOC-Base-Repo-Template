@@ -1,6 +1,6 @@
 # Contributing
 
-Thanks for improving the Dev-System-Awesome template. This repository is a
+Thanks for improving the GOC-Base-Repo-Template. This repository is a
 baseline for future projects, so changes should be broadly reusable.
 
 ## Contribution Standards
